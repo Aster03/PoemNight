@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>시, 그리고 밤 | 글쓰기</title>
+    <link rel="stylesheet" type="text/css" href="/styleSheet/writeP.css" />
+  </head>
+  <body bgcolor="#FFFDF9">
+      <div class="outermostCon">
+        <!--상단바 start-->
+        <div class="upperbar">
+          <a href="/">
+            <div class="titleblock">
+              <img class="sublogo" src="/img/logo_sub.png" />
+              <p class="title">시, 밤</p>
+            </div>
+          </a>
+          <div class="hrefblock">
+            <a href="/Poem/read"><span class="hrefspan">글읽기</span></a>
+            <a href="/Poem/write" id="nowinpage"><span class="hrefspan">글쓰기</span></a>
+          </div>
+        </div>
+        <div id="decobar1"></div>
+        <div id="decobar2"></div>
+        <!--상단바 end-->
+        <form action="/Poem/write" method="post">
+          <div class="wrapper">
+            <div id="authorWrapper">
+              <input type="text" id="title" placeholder="제목" name="title" />
+              <input type="text" id="Author" placeholder="작가명" name="author" />
+            </div>
+            <div id="contentsWrapper">
+              <textarea id="contents" name="contents"></textarea>
+            </div>
+            <div id="finWrapper">
+              <input type="submit" name="fin" id="fin" value="마침." />
+            </div>
+          </div>
+        </form>
+      </div>
+  </body>
+</html>

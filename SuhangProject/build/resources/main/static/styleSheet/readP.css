@@ -1,0 +1,234 @@
+@font-face {
+  font-family: "순바탕";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/SunBatang-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+ 
+}
+
+* :focus{
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body {
+  -ms-overflow-style: none; /*스크롤바 없이 스크롤 가능하게 만들기*/
+  height: fit-content;
+  width: 100vw;
+  margin: 0px;
+}
+
+body::-webkit-scrollbar {
+  /*스크롤바 없이 스크롤 가능하게 만들기*/
+  display: none;
+}
+
+/*상단 바 start */
+.upperbar {
+  position: sticky;
+  top: 0;
+  z-index: 0;
+  display: flex;
+  width: 100%;
+  height: 70px;
+  background-color: #ff5858;
+  box-shadow: 0px 1px 3px #828282;
+
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titleblock {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.sublogo {
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.title {
+  font-family: 순바탕;
+  color: white;
+  font-size: 25px;
+  margin: 0px;
+}
+
+.hrefblock {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+  width: 200px;
+}
+
+.hrefspan {
+  font-family: 순바탕;
+  color: white;
+  font-size: 20px;
+}
+
+#decobar1 {
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  height: 10px;
+  filter: drop-shadow(0px 1px 3px #828282);
+  background-color: #fffdf9;
+}
+
+#decobar2 {
+  position: relative;
+  z-index: -2;
+  width: 100%;
+  height: 10px;
+  filter: drop-shadow(0px 1px 3px #828282);
+  background-color: #fffdf9;
+}
+
+#nowinpage {
+  text-decoration: underline;
+  text-underline-position: under;
+}
+/*상단 바 end*/
+
+#container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+#wrapper {
+  padding: 70px 150px 100px 150px;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-flow: column
+}
+
+.poembox {
+  box-shadow: 1px 1px 3px 0px #828282;
+  height: auto;
+  width: 100%;
+  margin: 0px 0px 30px 0px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ff5858;
+  padding: 10px;
+
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.poemtitlebox{
+  height: fit-content;
+  display: flex;
+  flex-flow: column;
+
+}
+
+.poemtitle {
+  font-family: 순바탕;
+  font-size: 35px;
+  margin: 0px;
+}
+
+.author {
+  font-family: 순바탕;
+  margin: 5px 3px;
+  color: #585858;
+}
+
+.poem {
+  font-family: 순바탕;
+  font-size: 20px;
+  width: auto;
+}
+
+pre{
+  font-family: 순바탕;
+  font-size: 20px;
+}
+
+.endbox {
+  display: flex;
+  flex-flow: row-reverse;
+
+}
+
+.edit {
+  background-color: transparent;
+  border: none;
+  height: 62px;
+  width: 51px;
+  padding: 0px;
+  cursor: pointer;
+  background: url("/img/Checked recom.png") no-repeat;
+}
+
+.editbox{
+  flex-grow: 1;
+  display: flex;
+  flex-flow: row-reverse;
+  align-items: flex-end;
+}
+
+.searchBox{
+  border-radius: 20px;
+  margin: 50px auto 0px auto;
+  padding:5px 10px 5px 10px;
+  height: 40px;
+  width: 600px;
+  border: 1px solid #ff5858;
+  background: #fffdf9;
+  display: flex;
+  align-items: center;
+}
+
+.searchInput{
+  font-family: 순바탕;
+  font-size: 15px;
+  background-color: transparent;
+  width: 340px;
+  padding: 5px;
+  border: solid;
+  border-width: 0px 0px 0px 1px;
+  border-color: #ff5858;
+  outline: none;
+  flex-grow: 1;
+}
+
+.searchButton{
+  background-color: transparent;
+  border: none;
+  width: 24px;
+  height: 23px;
+  border: 0px;
+  outline: none;
+  padding: 0px;
+  margin: 0px 10px 0px 0px;
+}
+
+.searchDropD{
+  font-family: 순바탕;
+  font-size: 15px;
+  background-color: transparent;
+  border: none;
+}

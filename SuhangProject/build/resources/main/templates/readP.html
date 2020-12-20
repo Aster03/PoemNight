@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>시, 그리고 밤 | 글읽기</title>
+    <link rel="stylesheet" type="text/css" href="/styleSheet/readP.css" />
+    <script type="text/javascript" src="readP.js"></script>
+  </head>
+  <body bgcolor="#FFFDF9">
+    <div id="container">
+      <!--상단바 start-->
+      <div class="upperbar">
+        <a href="/">
+          <div class="titleblock">
+            <img class="sublogo" src="/img/logo_sub.png" />
+            <p class="title">시, 밤</p>
+          </div>
+        </a>
+        <div class="hrefblock">
+          <a href="/Poem/read"><span id="nowinpage" class="hrefspan">글읽기</span></a>
+          <a href="/Poem/write"><span class="hrefspan">글쓰기</span></a>
+        </div>
+      </div>
+      <div id="decobar1"></div>
+      <div id="decobar2"></div>
+      <!--상단바 end-->
+      <form action="/Poem/read" method="post">
+        <div class="searchBox">
+          <select class="searchDropD" name="type">
+            <option value="제목">제목</option>
+            <option value="작가명">작가명</option>
+          </select>
+          <input type="text" class="searchInput" name="input" placeholder="작가명 또는 작품명 입력">
+          <button class="searchButton" type="submit"><img src="/img/Icon_Search.png"></button>
+        </div>
+      </form>
+      <div id="wrapper">
+        <div class="poembox" th:each="poem : ${poemlist}">
+          <div class="poemtitlebox">
+            <table>
+              <tbody>
+                <tr><td th:text="${poem.title}" class="poemtitle"></td></tr>
+                <tr><td th:text="${poem.contents}" class="poem"></td></tr>
+                <tr><td th:text="'- '+${poem.author}+' -'" class="author"></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="endbox">
+            <div class="editbox">
+              <form action="/Poem/delete/search" method="get">
+                <select name="id" style="display: none;">
+                  <option th:value="${poem.id}" selected></option>
+                </select>
+                <button type="submit" class="edit"><img src="/img/Checked recom.png"></button>
+              </form>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

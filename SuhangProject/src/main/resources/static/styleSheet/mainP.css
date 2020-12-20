@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+area:focus {
+  border: none;
+  outline: none;
+  outline-style: none;
+  -moz-outline-style: none;
+}
+
+@font-face {
+  font-family: "순바탕";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/SunBatang-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+}
+
+.pharse_s {
+  font-family: 순바탕;
+  font-size: 20px;
+  margin: 0px;
+}
+
+.pharse_l {
+  font-family: 순바탕;
+  font-size: 50px;
+  margin: 10px 0px;
+}
+
+.logo {
+  height: 128px;
+  width: 106px;
+}
+
+.container {
+  padding: 100px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.hrefimageG {
+  margin: 200px 200px 0px 0px;
+}
